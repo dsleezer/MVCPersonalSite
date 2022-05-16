@@ -11,14 +11,15 @@
     <!-- Bootstrap icons-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
     <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="css/bootstrap.css" rel="stylesheet" />
-    <link href="css/styles.css" rel="stylesheet" />
-    <link href="css/custom.css" rel="stylesheet" />
+    <link href="../css/bootstrap.css" rel="stylesheet" />
+    <link href="../css/styles.css" rel="stylesheet" />
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/a34667cedc.js" crossorigin="anonymous"></script>
+    <!-- Custom CSS -->
+    <link href="../css/custom.css" rel="stylesheet" />
   </head>
   <body class="d-flex flex-column h-100 parallax">
-    <main class="flex-shrink-0">
       <!-- Navigation-->
-      <!-- Header-->
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-white sticky-top">
         <div class="container px-5">
           <h2>David Sleezer</h2>
@@ -35,11 +36,11 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-              <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-              <li class="nav-item"><a class="nav-link" href="Resume.html">Resume</a></li>
-              <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-              <li class="nav-item"><a class="nav-link" href="links.html">Links</a></li>
-              <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+              <li class="nav-item"><a class="nav-link active" href="@Url.Action("Index", "Home")">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="@Url.Action("Resume", "Home")">Resume</a></li>
+              <li class="nav-item"><a class="nav-link" href="@Url.Action("Projects", "Home")">Projects</a></li>
+              <li class="nav-item"><a class="nav-link" href="@Url.Action("Links", "Home")">Links</a></li>
+              <li class="nav-item"><a class="nav-link" href="@Url.Action("Contact", "Home")">Contact</a></li>
             </ul>
           </div>
         </div>
@@ -58,14 +59,18 @@
             </div>
           </div>
           <div class="col-auto">
-            <a class="link-light small" href="contact.html">Contact</a>
+            <a class="link-light small" href="@Url.Action("Contact", "Home")">Contact</a>
           </div>
         </div>
       </div>
     </footer>
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery -->
+    <script src="../js/jquery-3.6.0.min.js"></script>
     <!-- Core theme JS-->
-    <script src="js/scripts.js"></script>
+    <script src="../js/custom.js"></script>
   </body>
 </html>
+
+    @RenderSection("scripts", required: false)
